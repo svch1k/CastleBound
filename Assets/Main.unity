@@ -233,9 +233,10 @@ GameObject:
   - component: {fileID: 1570802898}
   - component: {fileID: 1570802897}
   - component: {fileID: 1570802899}
+  - component: {fileID: 1570802900}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,13 +298,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b75ec19a6a30e74c96073b72ea45723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 7
-  groundDrag: 5
+  moveSpeed: 1
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 2048
-  orientation: {fileID: 209911644}
+--- !u!114 &1570802900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570802896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 530ac3585f24bee4e81706719205671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shoot
+  cam: {fileID: 1670292369}
+  projectile: {fileID: 1151193970360131458, guid: 81ad42003173749408beb0a62631081a, type: 3}
+  firePoint: {fileID: 2020997285}
+  projectileSpeed: 30
+  fireRate: 10
 --- !u!1001 &1589884260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -314,7 +330,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalScale.x
-      value: 35.180405
+      value: 13.139665
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalScale.y
@@ -322,11 +338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalScale.z
-      value: 18.308228
+      value: 51.45634
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.4681
+      value: 1.3607
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -334,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8276
+      value: 15.029
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_LocalRotation.w
@@ -364,6 +380,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 761d8e1f988ed2345a28312145c79c6e, type: 2}
     - target: {fileID: 919132149155446097, guid: 4f53dfcf20632794fbd1451aca666aea, type: 3}
       propertyPath: m_Name
       value: cube
@@ -578,7 +598,7 @@ GameObject:
   - component: {fileID: 2020997286}
   m_Layer: 0
   m_Name: PlayerObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
