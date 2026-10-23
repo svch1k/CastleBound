@@ -27,7 +27,7 @@ public class HUD : MonoBehaviour
         SetScore(0);
         SetCoins(0);
         SetLevelProgress(0f);
-        SetCharge(1f);
+        SetCharge(0f);
         SetHealth(100, 100);
         SelectWeapon(0);
     }
