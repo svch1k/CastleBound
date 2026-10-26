@@ -1,5 +1,7 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,10 +15,21 @@ public class LevelManager : MonoBehaviour
     [Header("Finish")]
     public GameObject finishScreen;
     public float resetDelay = 3;
-    public KeyCode resetKey = KeyCode.R;
+    public Key resetKey = Key.R;
+
+    [Header("Death")]
+    public GameObject deathScreen;
+
+    [Header("End screens")]
+    public Text finishScoreText;
+    public Text deathScoreText;
+    public Button[] retryButtons;
 
     private bool finished;
     private float levelLength;
+
+    public bool IsPlaying => !finished;
+    public int Score { get; private set; }
 
     private void Awake()
     {
@@ -32,13 +45,21 @@ public class LevelManager : MonoBehaviour
         {
             finishScreen.SetActive(false);
         }
+        if (deathScreen != null)
+        {
+            deathScreen.SetActive(false);
+        }
+        foreach (Button button in retryButtons)
+        {
+            button.onClick.AddListener(ResetLevel);
+        }
     }
 
     void Update()
     {
         if (finished)
         {
-            if (Input.GetKeyDown(resetKey))
+            if (Keyboard.current != null && Keyboard.current[resetKey].wasPressedThisFrame)
             {
                 ResetLevel();
             }
@@ -49,12 +70,29 @@ public class LevelManager : MonoBehaviour
         HUD.Instance.SetLevelProgress(1 - distanceLeft / levelLength);
     }
 
+    public void AddScore(int amount)
+    {
+        if (finished) return;
+        Score += amount;
+        HUD.Instance.SetScore(Score);
+    }
+
     public void FinishLevel()
     {
         if (finished) return;
-        finished = true;
-
         HUD.Instance.SetLevelProgress(1);
+        EndLevel(finishScreen, finishScoreText);
+    }
+
+    public void FailLevel()
+    {
+        if (finished) return;
+        EndLevel(deathScreen, deathScoreText);
+    }
+
+    private void EndLevel(GameObject screen, Text scoreText)
+    {
+        finished = true;
 
         // Stop the player from running past the finish
         player.GetComponent<PlayerMovement>().enabled = false;
@@ -62,9 +100,16 @@ public class LevelManager : MonoBehaviour
         rb.linearVelocity = Vector3.zero;
         rb.isKinematic = true;
 
-        if (finishScreen != null)
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (scoreText != null)
         {
-            finishScreen.SetActive(true);
+            scoreText.text = Score.ToString();
+        }
+        if (screen != null)
+        {
+            screen.SetActive(true);
         }
 
         if (resetDelay > 0)
