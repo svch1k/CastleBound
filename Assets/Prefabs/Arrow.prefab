@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 713186945e7c0c24b99ab106f53d131e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Projectile
+  damage: 0
 --- !u!1 &2371926912984280177
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: 0f6a1b9e765d6c64693918ad4c4d866d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
