@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour, IDamageable
 {
-    public int hitsToKill = 2;
+    public float health = 60f;
     public int scoreValue = 100;
 
     [Header("Attack")]
@@ -19,7 +19,6 @@ public class Enemy : MonoBehaviour, IDamageable
     public Renderer bodyRenderer;
     public Color flashColor = Color.white;
 
-    private int hitsTaken;
     private float nextShotTime;
     private Transform player;
     private Rigidbody playerBody;
@@ -75,10 +74,10 @@ public class Enemy : MonoBehaviour, IDamageable
 
     public void TakeDamage(float amount)
     {
-        if (hitsTaken >= hitsToKill) return;
+        if (health <= 0) return;
 
-        hitsTaken++;
-        if (hitsTaken >= hitsToKill)
+        health -= amount;
+        if (health <= 0)
         {
             LevelManager.Instance.AddScore(scoreValue);
             Destroy(gameObject);
