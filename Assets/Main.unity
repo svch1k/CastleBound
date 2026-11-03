@@ -5892,10 +5892,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 1
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 2048
 --- !u!114 &1570802900
 MonoBehaviour:
   m_ObjectHideFlags: 0
