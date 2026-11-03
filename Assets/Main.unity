@@ -2569,7 +2569,6 @@ MonoBehaviour:
   startPoint: {fileID: 919784654}
   finishPoint: {fileID: 293517210}
   finishScreen: {fileID: 1398151494}
-  resetDelay: 0
   resetKey: 32
   deathScreen: {fileID: 2133256951}
   finishScoreText: {fileID: 1983214129}
