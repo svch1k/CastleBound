@@ -12,10 +12,10 @@ public class Projectile : MonoBehaviour
         if(collision.gameObject.tag != "Player" && collision.gameObject.tag != "Arrow")
         {
             hasHit = true;
-            IDamageable target = collision.collider.GetComponentInParent<IDamageable>();
-            if (target != null)
+            Enemy enemy = collision.collider.GetComponentInParent<Enemy>();
+            if (enemy != null)
             {
-                target.TakeDamage(damage);
+                enemy.TakeDamage(damage);
             }
             Destroy(gameObject);
         }
