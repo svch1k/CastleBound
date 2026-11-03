@@ -64,5 +64,6 @@ public class Shoot : MonoBehaviour
         var projectileObj = Instantiate(projectile, firePoint.position, Quaternion.LookRotation(direction)) as GameObject;
         projectileObj.GetComponent<Rigidbody>().linearVelocity = direction * speed;
         projectileObj.GetComponent<Projectile>().damage = damage;
+        Destroy(projectileObj, 5f);
     }
 }
