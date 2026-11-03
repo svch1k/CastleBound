@@ -21,7 +21,6 @@ public class Enemy : MonoBehaviour, IDamageable
 
     private float nextShotTime;
     private Transform player;
-    private Rigidbody playerBody;
     private Collider playerCollider;
     private MaterialPropertyBlock flashBlock;
 
@@ -33,7 +32,6 @@ public class Enemy : MonoBehaviour, IDamageable
         if (playerObject != null)
         {
             player = playerObject.transform;
-            playerBody = playerObject.GetComponent<Rigidbody>();
             playerCollider = playerObject.GetComponentInChildren<Collider>();
         }
     }
@@ -60,11 +58,6 @@ public class Enemy : MonoBehaviour, IDamageable
     private void ShootAtPlayer()
     {
         Vector3 target = playerCollider != null ? playerCollider.bounds.center : player.position;
-        float flightTime = Vector3.Distance(firePoint.position, target) / projectileSpeed;
-        if (playerBody != null)
-        {
-            target += playerBody.linearVelocity * flightTime;
-        }
         target += Random.insideUnitSphere * aimSpread;
 
         Vector3 direction = (target - firePoint.position).normalized;
