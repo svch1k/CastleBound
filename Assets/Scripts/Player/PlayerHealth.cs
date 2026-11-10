@@ -6,6 +6,8 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     public float Current { get; private set; }
 
+    public AudioClipGroup grunt_sound;
+
     void Awake()
     {
         Current = maxHealth;
@@ -21,6 +23,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         if (!LevelManager.Instance.IsPlaying || Current <= 0) return;
 
         Current = Mathf.Max(0, Current - amount);
+        AudioSourcePool.Instance.Play(grunt_sound);
         HUD.Instance.SetHealth(Mathf.CeilToInt(Current), maxHealth);
 
         if (Current <= 0)

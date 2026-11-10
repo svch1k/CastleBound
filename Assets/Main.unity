@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: 209911644}
   m_Layer: 0
   m_Name: Orientation
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4110,6 +4110,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5775510971931674265, guid: 91cea1d1f53d1f743bc4ed3f4215891b, type: 3}
   m_PrefabInstance: {fileID: 953893561}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &957441310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957441312}
+  - component: {fileID: 957441311}
+  m_Layer: 0
+  m_Name: AudioSourcePool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &957441311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957441310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcc24bb294b1fdb458aa1027dc8f2a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioSourcePool
+  AudioSourcePrefab: {fileID: 9039833555931750730, guid: 11df2f16e209c8544b3f68dcac18b2c3, type: 3}
+--- !u!4 &957441312
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957441310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.25, y: -0.5003, z: 5.32464}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &974693727
 GameObject:
   m_ObjectHideFlags: 0
@@ -5912,12 +5957,13 @@ MonoBehaviour:
   cam: {fileID: 1670292369}
   projectile: {fileID: 1151193970360131458, guid: 81ad42003173749408beb0a62631081a, type: 3}
   firePoint: {fileID: 2020997285}
-  minSpeed: 10
+  minSpeed: 5
   maxSpeed: 40
-  chargeTime: 1
+  chargeTime: 2
   minDamage: 10
   maxDamage: 50
-  fireRate: 10
+  fireRate: 5
+  bow_release_sound: {fileID: 11400000, guid: 026690491cc9cf349ba695f987bb54e1, type: 2}
 --- !u!114 &1570802901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5931,6 +5977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
   maxHealth: 100
+  grunt_sound: {fileID: 11400000, guid: 83df4df491248ff4d8725f47801e724d, type: 2}
 --- !u!1001 &1571947300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6475,8 +6522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3257493cb11532c46837118fff3e58da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCam
-  sensX: 300
-  sensY: 300
+  sensX: 200
+  sensY: 200
   orientation: {fileID: 209911644}
 --- !u!1 &1673014308
 GameObject:
@@ -6797,7 +6844,7 @@ GameObject:
   - component: {fileID: 1766157435}
   m_Layer: 0
   m_Name: CameraPos
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8476,3 +8523,4 @@ SceneRoots:
   - {fileID: 2015075944}
   - {fileID: 1135261818}
   - {fileID: 835688592}
+  - {fileID: 957441312}

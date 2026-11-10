@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9cb2ca906c46abb9845d0132be58ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  hitsToKill: 2
+  health: 40
   scoreValue: 100
   projectilePrefab: {fileID: 3231655481965232487, guid: f511bae7d599f17428916282cc29b7b8, type: 3}
   firePoint: {fileID: 3630476861245320641}

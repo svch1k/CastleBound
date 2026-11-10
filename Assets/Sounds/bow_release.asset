@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8397bf931d2702478a3d1e6aadfa293, type: 3}
+  m_Name: bow_release
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
+  Audios:
+  - {fileID: 8300000, guid: dbd5432e1fac8934e9706e1e0db44f49, type: 3}
+  - {fileID: 8300000, guid: 5fe2b0ffab1298f46a9dfbc5c951d0da, type: 3}
+  - {fileID: 8300000, guid: c5d81a78f03f8ef479993c986a828116, type: 3}
+  mixerGroup: {fileID: 0}
+  VolumeMin: 0.76
+  VolumeMax: 1.18
+  PitchMin: 0.67
+  PitchMax: 1.28
+  Cooldown: 0.1

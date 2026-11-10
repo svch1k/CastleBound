@@ -18,6 +18,7 @@ public class Shoot : MonoBehaviour
     private bool charging;
     private float timeToFire;
     public float fireRate = 4;
+    public AudioClipGroup bow_release_sound;
     void Update()
     {
         if (!LevelManager.Instance.IsPlaying || Mouse.current == null) return;
@@ -36,6 +37,7 @@ public class Shoot : MonoBehaviour
             {
                 timeToFire = Time.time + 1 / fireRate;
                 ShootProjectile(Mathf.Lerp(minSpeed, maxSpeed, charge), Mathf.Lerp(minDamage, maxDamage, charge));
+                AudioSourcePool.Instance.Play(bow_release_sound);
                 charging = false;
                 charge = 0;
                 HUD.Instance.SetCharge(0);
