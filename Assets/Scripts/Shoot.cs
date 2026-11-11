@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
-
+    public PlayerData Stats;
     public Camera cam;
     private Vector3 destination;
     public GameObject projectile;
@@ -19,6 +19,13 @@ public class Shoot : MonoBehaviour
     private float timeToFire;
     public float fireRate = 4;
     public AudioClipGroup bow_release_sound;
+
+    private void Start()
+    {
+        minDamage *= Stats.DamageMultiplier;
+        maxDamage *= Stats.DamageMultiplier;
+        chargeTime = chargeTime / Stats.DrawSpeedMultiplier;
+    }
     void Update()
     {
         if (!LevelManager.Instance.IsPlaying || Mouse.current == null) return;

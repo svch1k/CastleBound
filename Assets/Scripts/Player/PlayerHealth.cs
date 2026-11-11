@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour, IDamageable
 {
+    public PlayerData Stats;
     public int maxHealth = 100;
 
     public float Current { get; private set; }
@@ -10,6 +11,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     void Awake()
     {
+        maxHealth *= Stats.MaxHealthMultiplier;
         Current = maxHealth;
     }
 

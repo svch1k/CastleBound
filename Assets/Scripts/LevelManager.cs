@@ -121,4 +121,8 @@ public class LevelManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void ToShop()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
