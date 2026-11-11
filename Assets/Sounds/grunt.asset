@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8397bf931d2702478a3d1e6aadfa293, type: 3}
+  m_Name: grunt
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClipGroup
+  Audios:
+  - {fileID: 8300000, guid: 78303f683011fcd43b5cc909308adfd4, type: 3}
+  - {fileID: 8300000, guid: 0dd559b7fbdd2b246b53ba4ec20854fe, type: 3}
+  - {fileID: 8300000, guid: e954fa62d3b0d9a45a876807e6328955, type: 3}
+  - {fileID: 8300000, guid: 5094e6e93a16cce4c95ed66f2fe30ca4, type: 3}
+  - {fileID: 8300000, guid: bcf6653702838274582e1e6aa20f8f5c, type: 3}
+  mixerGroup: {fileID: 0}
+  VolumeMin: 0.65
+  VolumeMax: 1.36
+  PitchMin: 0.87
+  PitchMax: 1.02
+  Cooldown: 0.71

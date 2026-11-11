@@ -93,7 +93,6 @@ public class LevelManager : MonoBehaviour
     {
         finished = true;
 
-        // Stop the player from running past the finish
         player.GetComponent<PlayerMovement>().enabled = false;
         Rigidbody rb = player.GetComponent<Rigidbody>();
         rb.linearVelocity = Vector3.zero;
@@ -115,5 +114,9 @@ public class LevelManager : MonoBehaviour
     public void ResetLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void ToShop()
+    {
+        SceneManager.LoadScene(1);
     }
 }

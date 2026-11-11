@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Shoot : MonoBehaviour
 {
-
+    public PlayerData Stats;
     public Camera cam;
     public GameObject projectile;
     public Transform firePoint;
@@ -16,6 +16,14 @@ public class Shoot : MonoBehaviour
     private bool charging;
     private float timeToFire;
     public float fireRate = 4;
+    public AudioClipGroup bow_release_sound;
+
+    private void Start()
+    {
+        minDamage *= Stats.DamageMultiplier;
+        maxDamage *= Stats.DamageMultiplier;
+        chargeTime = chargeTime / Stats.DrawSpeedMultiplier;
+    }
     void Update()
     {
         if (!LevelManager.Instance.IsPlaying || Mouse.current == null) return;
@@ -34,6 +42,7 @@ public class Shoot : MonoBehaviour
             {
                 timeToFire = Time.time + 1 / fireRate;
                 ShootProjectile(Mathf.Lerp(minSpeed, maxSpeed, charge), Mathf.Lerp(minDamage, maxDamage, charge));
+                AudioSourcePool.Instance.Play(bow_release_sound);
                 charging = false;
                 charge = 0;
                 HUD.Instance.SetCharge(0);

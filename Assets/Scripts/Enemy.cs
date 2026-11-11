@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float health = 60f;
+    public float health = 30f;
     public int scoreValue = 100;
 
     [Header("Attack")]
@@ -67,9 +67,9 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        if (health <= 0) return;
-
+        print(amount);
         health -= amount;
+
         if (health <= 0)
         {
             LevelManager.Instance.AddScore(scoreValue);
