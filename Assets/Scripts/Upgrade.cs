@@ -13,14 +13,6 @@ public class Upgrade : ScriptableObject
     public float BaseValue;
     public float ValueIncrease;
 
-    private void Awake()
-    {
-        Events.OnResetStore += Reset;
-    }
-    private void OnDestroy()
-    {
-        Events.OnResetStore += Reset;
-    }
 
     public int GetCost()
     {

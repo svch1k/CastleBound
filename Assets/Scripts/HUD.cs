@@ -6,6 +6,7 @@ public class HUD : MonoBehaviour
     public static HUD Instance;
 
     public Text scoreText;
+    public Text GoldText;
     public RectTransform progressFill;
     public RectTransform chargeFill;
     public RectTransform healthFill;
@@ -26,6 +27,10 @@ public class HUD : MonoBehaviour
     public void SetScore(int score)
     {
         scoreText.text = score.ToString();
+    }
+    public void SetGold(int gold)
+    {
+        GoldText.text = gold.ToString();
     }
 
     public void SetLevelProgress(float progress)

@@ -1,10 +1,12 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ShopManager : MonoBehaviour
 {
     public PlayerData Stats;
+    public TextMeshProUGUI GoldText;
 
     private void Awake()
     {
@@ -14,12 +16,15 @@ public class ShopManager : MonoBehaviour
     {
         Events.OnBuyUpgrade -= BuyUpgrade;
     }
+    private void Start()
+    {
+        SetGoldText();
+    }
 
     public void BuyUpgrade(Upgrade upgrade)
     {
         if (Stats.Gold >= upgrade.GetCost() && upgrade.CurrentLevel < upgrade.MaxLevel)
         {
-            print("bought " + upgrade.CurrentLevel);
             Stats.Gold -= upgrade.GetCost();
             
             switch (upgrade.type)
@@ -28,7 +33,7 @@ public class ShopManager : MonoBehaviour
                     Stats.DamageMultiplier = 1 + upgrade.GetValue() / 100;
                     break;
                 case UpgradeType.MaxHealth:
-                    Stats.MaxHealthMultiplier = 1 + (int)upgrade.GetValue() / 100;
+                    Stats.MaxHealthMultiplier = 1 + upgrade.GetValue() / 100;
                     break;
                 case UpgradeType.DrawSpeed:
                     Stats.DrawSpeedMultiplier = 1 + upgrade.GetValue() / 100;
@@ -40,6 +45,7 @@ public class ShopManager : MonoBehaviour
             upgrade.CurrentLevel += 1;
 
             Events.UpgradeBought(upgrade);
+            SetGoldText();
         }
     }
     public void OnContinuePressed()
@@ -48,6 +54,11 @@ public class ShopManager : MonoBehaviour
     }
     public void OnResetPressed()
     {
+        Stats.Reset();
         Events.ResetStore();
+    }
+    public void SetGoldText()
+    {
+        GoldText.text = "Gold: " + Stats.Gold.ToString();
     }
 }

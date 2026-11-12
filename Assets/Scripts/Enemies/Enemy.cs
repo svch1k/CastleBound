@@ -5,6 +5,7 @@ public class Enemy : MonoBehaviour, IDamageable
 {
     public float health = 30f;
     public int scoreValue = 100;
+    public int GoldValue = 100;
 
     [Header("Attack")]
     public EnemyProjectile projectilePrefab;
@@ -80,6 +81,7 @@ public class Enemy : MonoBehaviour, IDamageable
         if (health <= 0)
         {
             LevelManager.Instance.AddScore(scoreValue);
+            LevelManager.Instance.AddGold(GoldValue);
             Destroy(gameObject);
             return;
         }

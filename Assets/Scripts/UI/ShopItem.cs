@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.AppUI.UI;
 using UnityEngine;
@@ -13,10 +14,13 @@ public class ShopItem : MonoBehaviour
     private void Awake()
     {
         Events.OnUpgradeBought += UpgradePurchased;
+        Events.OnResetStore += StoreReset;
     }
+
     private void OnDestroy()
     {
         Events.OnUpgradeBought -= UpgradePurchased;
+        Events.OnResetStore += StoreReset;
     }
 
     void Start()
@@ -48,5 +52,10 @@ public class ShopItem : MonoBehaviour
         {
             PriceText.text = (Upgrade.BaseCost + Upgrade.CurrentLevel * 100).ToString();
         }
+    }
+    private void StoreReset()
+    {
+        Upgrade.Reset();
+        SetTexts();
     }
 }

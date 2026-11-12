@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
 
     void Awake()
     {
-        maxHealth *= Stats.MaxHealthMultiplier;
+        maxHealth = Mathf.RoundToInt(maxHealth * Stats.MaxHealthMultiplier);
         Current = maxHealth;
     }
 
