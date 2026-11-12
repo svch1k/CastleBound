@@ -15,7 +15,6 @@ public class LevelManager : MonoBehaviour
 
     [Header("Finish")]
     public GameObject finishScreen;
-    public float resetDelay = 3;
     public Key resetKey = Key.R;
 
     [Header("Death")]
@@ -120,11 +119,6 @@ public class LevelManager : MonoBehaviour
         if (screen != null)
         {
             screen.SetActive(true);
-        }
-
-        if (resetDelay > 0)
-        {
-            Invoke(nameof(ResetLevel), resetDelay);
         }
     }
 

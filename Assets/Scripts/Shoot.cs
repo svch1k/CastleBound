@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -6,7 +5,6 @@ public class Shoot : MonoBehaviour
 {
     public PlayerData Stats;
     public Camera cam;
-    private Vector3 destination;
     public GameObject projectile;
     public Transform firePoint;
     public float minSpeed = 10;
@@ -55,14 +53,10 @@ public class Shoot : MonoBehaviour
     private void ShootProjectile(float speed, float damage)
     {
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        RaycastHit hit;
-         if(Physics.Raycast(ray, out hit))
+        Vector3 destination = ray.GetPoint(1000);
+        if (Physics.Raycast(ray, out RaycastHit hit))
         {
             destination = hit.point;
-        }
-        else
-        {
-            destination = ray.GetPoint(1000);
         }
         Vector3 direction = (destination - firePoint.position).normalized;
         InstantiateProjectile(direction, speed, damage);
@@ -70,8 +64,9 @@ public class Shoot : MonoBehaviour
 
     private void InstantiateProjectile(Vector3 direction, float speed, float damage)
     {
-        var projectileObj = Instantiate(projectile, firePoint.position, Quaternion.LookRotation(direction)) as GameObject;
+        GameObject projectileObj = Instantiate(projectile, firePoint.position, Quaternion.LookRotation(direction));
         projectileObj.GetComponent<Rigidbody>().linearVelocity = direction * speed;
         projectileObj.GetComponent<Projectile>().damage = damage;
+        Destroy(projectileObj, 5f);
     }
 }

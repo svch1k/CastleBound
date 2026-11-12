@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,12 +6,16 @@ public class HUD : MonoBehaviour
 {
     public static HUD Instance;
 
-    public Text scoreText;
+    public TMP_Text scoreValue;
     public Text GoldText;
-    public RectTransform progressFill;
-    public RectTransform chargeFill;
-    public RectTransform healthFill;
-    public Text healthText;
+    public Image levelProgress;
+
+    public Image chargeBar;
+
+    public Image healthBar;
+    public TMP_Text healthText;
+
+    public GameObject[] weaponHighlights;
 
     private void Awake()
     {
@@ -20,14 +25,17 @@ public class HUD : MonoBehaviour
     void Start()
     {
         SetScore(0);
-        SetLevelProgress(0);
-        SetCharge(0);
+        SetLevelProgress(0f);
+        SetCharge(0f);
+        SetHealth(100, 100);
+        SelectWeapon(0);
     }
 
     public void SetScore(int score)
     {
-        scoreText.text = score.ToString();
+        scoreValue.text = score.ToString();
     }
+
     public void SetGold(int gold)
     {
         GoldText.text = gold.ToString();
@@ -35,22 +43,25 @@ public class HUD : MonoBehaviour
 
     public void SetLevelProgress(float progress)
     {
-        SetFill(progressFill, progress);
+        levelProgress.fillAmount = Mathf.Clamp01(progress);
     }
 
     public void SetCharge(float charge)
     {
-        SetFill(chargeFill, charge);
+        chargeBar.fillAmount = Mathf.Clamp01(charge);
     }
 
     public void SetHealth(int health, int maxHealth)
     {
-        SetFill(healthFill, (float)health / maxHealth);
+        healthBar.fillAmount = Mathf.Clamp01((float)health / maxHealth);
         healthText.text = health + " / " + maxHealth;
     }
 
-    private void SetFill(RectTransform fill, float amount)
+    public void SelectWeapon(int index)
     {
-        fill.anchorMax = new Vector2(Mathf.Clamp01(amount), 1);
+        for (int i = 0; i < weaponHighlights.Length; i++)
+        {
+            weaponHighlights[i].SetActive(i == index);
+        }
     }
 }

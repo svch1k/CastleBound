@@ -3,8 +3,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    public float sensX = 0.5f;
+    public float sensY = 0.5f;
     public Transform orientation;
     float xRotation;
     float yRotation;
@@ -19,9 +19,9 @@ public class PlayerCam : MonoBehaviour
     {
         if (!LevelManager.Instance.IsPlaying || Mouse.current == null) return;
 
-        Vector2 mouseDelta = Mouse.current.delta.ReadValue() * 0.1f;
-        float mouseX = mouseDelta.x * Time.deltaTime * sensX;
-        float mouseY = mouseDelta.y * Time.deltaTime * sensY;
+        Vector2 mouseDelta = Mouse.current.delta.ReadValue();
+        float mouseX = mouseDelta.x * sensX;
+        float mouseY = mouseDelta.y * sensY;
 
         yRotation += mouseX;
         xRotation -= mouseY;
