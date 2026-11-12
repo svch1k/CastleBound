@@ -7,7 +7,7 @@ public class HUD : MonoBehaviour
     public static HUD Instance;
 
     public TMP_Text scoreValue;
-    public Text GoldText;
+    public TMP_Text GoldText;
     public Image levelProgress;
 
     public Image chargeBar;
