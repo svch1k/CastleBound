@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2282924110409252275}
-  - component: {fileID: 2567710635074150905}
   - component: {fileID: 741065523999054965}
   - component: {fileID: 4641652682021494488}
   m_Layer: 5
@@ -43,21 +42,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -6, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2567710635074150905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586653471706788990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 1
-  alpha: 1
 --- !u!222 &741065523999054965
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -106,7 +90,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6931188029431933594}
   - component: {fileID: 2098272104785218384}
-  - component: {fileID: 6032375670664037216}
   - component: {fileID: 4660818139426717993}
   - component: {fileID: 3641491273321550007}
   - component: {fileID: 3744004792667413659}
@@ -145,21 +128,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365817766549077593}
   m_CullTransparentMesh: 1
---- !u!114 &6032375670664037216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365817766549077593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 7
-  alpha: 1
 --- !u!114 &4660818139426717993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +227,6 @@ GameObject:
   m_Component:
   - component: {fileID: 507684533083468272}
   - component: {fileID: 8369494568426784155}
-  - component: {fileID: 3904912123384759844}
   - component: {fileID: 6791892434595626849}
   m_Layer: 5
   m_Name: Price
@@ -295,21 +262,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2840073906897525972}
   m_CullTransparentMesh: 1
---- !u!114 &3904912123384759844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2840073906897525972}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &6791892434595626849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -412,7 +364,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7797037451769843872}
   - component: {fileID: 6929804632037400556}
-  - component: {fileID: 1598134544693303571}
   - component: {fileID: 1425986455859687370}
   m_Layer: 5
   m_Name: Description
@@ -448,21 +399,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2987748027922037128}
   m_CullTransparentMesh: 1
---- !u!114 &1598134544693303571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2987748027922037128}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &1425986455859687370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -565,7 +501,6 @@ GameObject:
   m_Component:
   - component: {fileID: 885827621034708839}
   - component: {fileID: 4675714365563674804}
-  - component: {fileID: 1314752914034490904}
   - component: {fileID: 7141759674338751682}
   m_Layer: 5
   m_Name: Level
@@ -601,21 +536,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4605613049480980976}
   m_CullTransparentMesh: 1
---- !u!114 &1314752914034490904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4605613049480980976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &7141759674338751682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -718,7 +638,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8942033076060494184}
   - component: {fileID: 5816073505088348814}
-  - component: {fileID: 369343181293017151}
   - component: {fileID: 5133587370265489080}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -754,21 +673,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4888639334710894327}
   m_CullTransparentMesh: 1
---- !u!114 &369343181293017151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4888639334710894327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &5133587370265489080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -871,7 +775,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4100473641025147223}
   - component: {fileID: 1791858987430009003}
-  - component: {fileID: 7440628464287251260}
   - component: {fileID: 8077481306926967515}
   m_Layer: 5
   m_Name: Skill name
@@ -907,21 +810,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6844563499724196515}
   m_CullTransparentMesh: 1
---- !u!114 &7440628464287251260
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6844563499724196515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &8077481306926967515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1025,7 +913,6 @@ GameObject:
   - component: {fileID: 3701114957037451922}
   - component: {fileID: 1781247770912172259}
   - component: {fileID: 6734973610801227308}
-  - component: {fileID: 6460693352241725778}
   - component: {fileID: 9070599103479576764}
   m_Layer: 5
   m_Name: ShopItem
@@ -1079,21 +966,6 @@ MonoBehaviour:
   LevelText: {fileID: 0}
   DescriptionText: {fileID: 0}
   PriceText: {fileID: 0}
---- !u!114 &6460693352241725778
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6925113326161635306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 5
-  alpha: 1
 --- !u!114 &9070599103479576764
 MonoBehaviour:
   m_ObjectHideFlags: 0

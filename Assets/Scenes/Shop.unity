@@ -256,7 +256,6 @@ GameObject:
   m_Component:
   - component: {fileID: 228310030}
   - component: {fileID: 228310033}
-  - component: {fileID: 228310034}
   - component: {fileID: 228310032}
   - component: {fileID: 228310031}
   - component: {fileID: 228310035}
@@ -381,21 +380,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228310029}
   m_CullTransparentMesh: 1
---- !u!114 &228310034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228310029}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 7
-  alpha: 1
 --- !u!114 &228310035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +484,6 @@ GameObject:
   m_Component:
   - component: {fileID: 335644333}
   - component: {fileID: 335644336}
-  - component: {fileID: 335644335}
   - component: {fileID: 335644334}
   m_Layer: 5
   m_Name: GoldText
@@ -620,21 +603,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &335644335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 335644332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!222 &335644336
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -653,7 +621,6 @@ GameObject:
   m_Component:
   - component: {fileID: 500540335}
   - component: {fileID: 500540337}
-  - component: {fileID: 500540338}
   - component: {fileID: 500540336}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -781,21 +748,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500540334}
   m_CullTransparentMesh: 1
---- !u!114 &500540338
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 500540334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!1 &917778444
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,7 +757,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 917778445}
-  - component: {fileID: 917778448}
   - component: {fileID: 917778447}
   - component: {fileID: 917778446}
   m_Layer: 5
@@ -877,21 +828,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 917778444}
   m_CullTransparentMesh: 1
---- !u!114 &917778448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 917778444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 1
-  alpha: 1
 --- !u!1001 &1448464471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1224,7 +1160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1495460685}
   - component: {fileID: 1495460690}
-  - component: {fileID: 1495460689}
   - component: {fileID: 1495460688}
   - component: {fileID: 1495460687}
   - component: {fileID: 1495460686}
@@ -1356,21 +1291,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1495460689
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495460684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 7
-  alpha: 1
 --- !u!222 &1495460690
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1389,7 +1309,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1536702138}
   - component: {fileID: 1536702141}
-  - component: {fileID: 1536702140}
   - component: {fileID: 1536702139}
   m_Layer: 5
   m_Name: Text (TMP)
@@ -1509,21 +1428,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &1536702140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1536702137}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!222 &1536702141
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2044,7 +1948,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2008463238}
   - component: {fileID: 2008463241}
-  - component: {fileID: 2008463240}
   - component: {fileID: 2008463239}
   m_Layer: 5
   m_Name: ShopText
@@ -2164,21 +2067,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &2008463240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008463237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!222 &2008463241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2196,7 +2084,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2117731185}
-  - component: {fileID: 2117731189}
   - component: {fileID: 2117731187}
   - component: {fileID: 2117731186}
   - component: {fileID: 2117731188}
@@ -2292,21 +2179,6 @@ MonoBehaviour:
   m_Spacing: {x: 100, y: 200}
   m_Constraint: 0
   m_ConstraintCount: 2
---- !u!114 &2117731189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2117731184}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 7
-  alpha: 1
 --- !u!114 &15660613049821465 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7141759674338751682, guid: c85290541efb124469218639181bd57f, type: 3}

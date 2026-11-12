@@ -10003,7 +10003,6 @@ GameObject:
   - component: {fileID: 717148393}
   - component: {fileID: 717148392}
   - component: {fileID: 717148391}
-  - component: {fileID: 717148390}
   m_Layer: 0
   m_Name: ShopButton
   m_TagString: Untagged
@@ -10031,21 +10030,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -317}
   m_SizeDelta: {x: 280, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &717148390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717148388}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 3
-  alpha: 1
 --- !u!114 &717148391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10197,7 +10181,6 @@ GameObject:
   - component: {fileID: 1049356400}
   - component: {fileID: 1049356399}
   - component: {fileID: 1049356398}
-  - component: {fileID: 1049356397}
   m_Layer: 0
   m_Name: ShopButton
   m_TagString: Untagged
@@ -10225,21 +10208,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -264}
   m_SizeDelta: {x: 280, y: 74}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1049356397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049356395}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 3
-  alpha: 1
 --- !u!114 &1049356398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10345,7 +10313,6 @@ GameObject:
   - component: {fileID: 1880869048}
   - component: {fileID: 1880869051}
   - component: {fileID: 1880869050}
-  - component: {fileID: 1880869049}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -10372,21 +10339,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1880869049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1880869047}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &1880869050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10440,7 +10392,6 @@ GameObject:
   - component: {fileID: 2141848462}
   - component: {fileID: 2141848465}
   - component: {fileID: 2141848464}
-  - component: {fileID: 2141848463}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -10467,21 +10418,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2141848463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2141848461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &2141848464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10535,7 +10471,6 @@ GameObject:
   - component: {fileID: 417741924}
   - component: {fileID: 417741927}
   - component: {fileID: 417741926}
-  - component: {fileID: 417741925}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -10565,21 +10500,6 @@ RectTransform:
   m_AnchoredPosition: {x: -340, y: -40}
   m_SizeDelta: {x: 300, y: 136}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &417741925
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 417741923}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 5
-  alpha: 0.9
 --- !u!114 &417741926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10629,7 +10549,6 @@ GameObject:
   - component: {fileID: 794827044}
   - component: {fileID: 794827047}
   - component: {fileID: 794827046}
-  - component: {fileID: 794827045}
   m_Layer: 0
   m_Name: Inner
   m_TagString: Untagged
@@ -10656,21 +10575,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -6, y: -6}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &794827045
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 794827043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 1
-  alpha: 0.85
 --- !u!114 &794827046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10720,7 +10624,6 @@ GameObject:
   - component: {fileID: 844080664}
   - component: {fileID: 844080663}
   - component: {fileID: 844080661}
-  - component: {fileID: 844080662}
   m_Layer: 0
   m_Name: Value
   m_TagString: Untagged
@@ -10762,21 +10665,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &844080662
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 844080660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!222 &844080663
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10815,7 +10703,6 @@ GameObject:
   - component: {fileID: 1657804300}
   - component: {fileID: 1657804303}
   - component: {fileID: 1657804302}
-  - component: {fileID: 1657804301}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -10842,21 +10729,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -44, y: -28}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1657804301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1657804299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37def259066543cface1e60627df2de2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UIColor
-  palette: {fileID: 11400000, guid: 0763bdb843114e629af182627812952a, type: 2}
-  role: 2
-  alpha: 1
 --- !u!114 &1657804302
 MonoBehaviour:
   m_ObjectHideFlags: 0
