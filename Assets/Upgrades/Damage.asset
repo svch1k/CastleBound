@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: Damage
   m_EditorClassIdentifier: Assembly-CSharp::Upgrade
   Name: Damage
+  type: 0
   Description: 'Increase damage dealt by '
   Sprite: {fileID: 0}
   MaxLevel: 5
+  CurrentLevel: 0
   BaseCost: 100
   BaseValue: 10
   ValueIncrease: 10

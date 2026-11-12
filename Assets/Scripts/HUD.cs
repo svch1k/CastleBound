@@ -7,7 +7,7 @@ public class HUD : MonoBehaviour
     public static HUD Instance;
 
     public TMP_Text scoreValue;
-    public TMP_Text coinsValue;
+    public Text GoldText;
     public Image levelProgress;
 
     public Image chargeBar;
@@ -25,7 +25,6 @@ public class HUD : MonoBehaviour
     void Start()
     {
         SetScore(0);
-        SetCoins(0);
         SetLevelProgress(0f);
         SetCharge(0f);
         SetHealth(100, 100);
@@ -37,9 +36,9 @@ public class HUD : MonoBehaviour
         scoreValue.text = score.ToString();
     }
 
-    public void SetCoins(int coins)
+    public void SetGold(int gold)
     {
-        coinsValue.text = coins.ToString();
+        GoldText.text = gold.ToString();
     }
 
     public void SetLevelProgress(float progress)

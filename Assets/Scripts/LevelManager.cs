@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    public PlayerData Stats;
     public static LevelManager Instance;
 
     [Header("Level")]
@@ -37,6 +38,10 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
+        if (HUD.Instance != null)
+        {
+            HUD.Instance.SetGold(Stats.Gold);
+        }
         player.SetPositionAndRotation(startPoint.position, startPoint.rotation);
         levelLength = Vector3.Distance(startPoint.position, finishPoint.position);
 
@@ -74,6 +79,12 @@ public class LevelManager : MonoBehaviour
         if (finished) return;
         Score += amount;
         HUD.Instance.SetScore(Score);
+    }
+    public void AddGold(int amount)
+    {
+        if (finished) return;
+        Stats.Gold += Mathf.RoundToInt(amount * Stats.GoldMultiplier);
+        HUD.Instance.SetGold(Stats.Gold);
     }
 
     public void FinishLevel()
