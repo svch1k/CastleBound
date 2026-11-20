@@ -70,8 +70,8 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        float distanceLeft = Vector3.Distance(player.position, finishPoint.position);
-        HUD.Instance.SetLevelProgress(1 - distanceLeft / levelLength);
+        float progress = Mathf.InverseLerp(startPoint.position.z, finishPoint.position.z, player.position.z); ;
+        HUD.Instance.SetLevelProgress(progress);
     }
 
     public void AddScore(int amount)

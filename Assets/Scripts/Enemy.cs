@@ -73,9 +73,10 @@ public class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+            Destroy(gameObject);
             LevelManager.Instance.AddScore(scoreValue);
             LevelManager.Instance.AddGold(GoldValue);
-            Destroy(gameObject);
+            
             return;
         }
 
