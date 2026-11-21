@@ -7310,6 +7310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   moveSpeed: 1
+  step_sound: {fileID: 11400000, guid: f9a984a03ba4ca54e9457e275ae78749, type: 2}
+  stepInterval: 0.5
 --- !u!114 &1570802900
 MonoBehaviour:
   m_ObjectHideFlags: 0
