@@ -29,4 +29,13 @@ public class AudioClipGroup : ScriptableObject
         src.outputAudioMixerGroup = mixerGroup;
         src.Play();
     }
+    public void Play(AudioSource src, float targetDuration)
+    {
+        AudioClip clip = Audios[Random.Range(0, Audios.Count)];
+        src.clip = clip;
+        src.volume = Random.Range(VolumeMin, VolumeMax);
+        src.pitch = Mathf.Clamp(clip.length / targetDuration, PitchMin, PitchMax);
+        src.outputAudioMixerGroup = mixerGroup;
+        src.Play();
+    }
 }

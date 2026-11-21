@@ -59,4 +59,12 @@ public class AudioSourcePool : MonoBehaviour
         source.spatialBlend = 1.0f;
         group.Play(source);
     }
+    public AudioSource Play(AudioClipGroup group, float targetDuration)
+    {
+        if (!CanPlay(group)) return null;
+        AudioSource source = GetAudioSource();
+        source.spatialBlend = 0.0f;
+        group.Play(source, targetDuration);
+        return source;
+    }
 }

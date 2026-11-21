@@ -7333,6 +7333,7 @@ MonoBehaviour:
   maxDamage: 50
   fireRate: 5
   bow_release_sound: {fileID: 11400000, guid: 026690491cc9cf349ba695f987bb54e1, type: 2}
+  bow_draw_sound: {fileID: 11400000, guid: 01859b637e67ff949bd607b6de303bfd, type: 2}
 --- !u!114 &1570802901
 MonoBehaviour:
   m_ObjectHideFlags: 0

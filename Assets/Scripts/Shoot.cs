@@ -17,6 +17,8 @@ public class Shoot : MonoBehaviour
     private float timeToFire;
     public float fireRate = 4;
     public AudioClipGroup bow_release_sound;
+    public AudioClipGroup bow_draw_sound;
+    private AudioSource drawSource;
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class Shoot : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame && Time.time >= timeToFire)
         {
             charging = true;
+            drawSource = AudioSourcePool.Instance.Play(bow_draw_sound, chargeTime);
         }
 
         if (charging)
@@ -40,6 +43,9 @@ public class Shoot : MonoBehaviour
 
             if (Mouse.current.leftButton.wasReleasedThisFrame)
             {
+                if (drawSource != null && bow_draw_sound.Audios.Contains(drawSource.clip))
+                    drawSource.Stop();
+                drawSource = null;
                 timeToFire = Time.time + 1 / fireRate;
                 ShootProjectile(Mathf.Lerp(minSpeed, maxSpeed, charge), Mathf.Lerp(minDamage, maxDamage, charge));
                 AudioSourcePool.Instance.Play(bow_release_sound);
