@@ -19,6 +19,7 @@ public class Shoot : MonoBehaviour
     public AudioClipGroup bow_release_sound;
     public AudioClipGroup bow_draw_sound;
     private AudioSource drawSource;
+    public Animator bowAnimator;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class Shoot : MonoBehaviour
         if (Mouse.current.leftButton.wasPressedThisFrame && Time.time >= timeToFire)
         {
             charging = true;
+            bowAnimator.SetBool("Drawing", true);
             drawSource = AudioSourcePool.Instance.Play(bow_draw_sound, chargeTime);
         }
 
@@ -50,6 +52,7 @@ public class Shoot : MonoBehaviour
                 ShootProjectile(Mathf.Lerp(minSpeed, maxSpeed, charge), Mathf.Lerp(minDamage, maxDamage, charge));
                 AudioSourcePool.Instance.Play(bow_release_sound);
                 charging = false;
+                bowAnimator.SetBool("Drawing", false);
                 charge = 0;
                 HUD.Instance.SetCharge(0);
             }
