@@ -25,6 +25,9 @@ public class Enemy : MonoBehaviour
     private Collider playerCollider;
     private MaterialPropertyBlock flashBlock;
 
+    public Animator animator;
+    private bool dead;
+
     void Start()
     {
         nextShotTime = Time.time + Random.Range(0.5f, fireInterval);
@@ -40,6 +43,7 @@ public class Enemy : MonoBehaviour
     void Update()
     {
         if (!LevelManager.Instance.IsPlaying || player == null) return;
+        if (dead) return;
 
         Vector3 toPlayer = player.position - transform.position;
         toPlayer.y = 0;
@@ -67,13 +71,14 @@ public class Enemy : MonoBehaviour
     }
 
     public void TakeDamage(float amount)
-    {
+    {   
+        if (dead) return;
         print(amount);
         health -= amount;
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
             LevelManager.Instance.AddScore(scoreValue);
             LevelManager.Instance.AddGold(GoldValue);
             
@@ -84,6 +89,16 @@ public class Enemy : MonoBehaviour
         {
             StartCoroutine(Flash());
         }
+
+        animator.SetTrigger("Hit");
+    }
+
+    public void Die()
+    {
+        dead = true;
+        animator.SetBool("Dead", true);
+        GetComponent<Collider>().enabled = false;
+        Destroy(gameObject, 1.5f);
     }
 
     private IEnumerator Flash()
