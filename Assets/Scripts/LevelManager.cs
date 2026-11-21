@@ -27,6 +27,7 @@ public class LevelManager : MonoBehaviour
 
     private bool finished;
     private float levelLength;
+    private static bool dataReset;
 
     public bool IsPlaying => !finished;
     public int Score { get; private set; }
@@ -34,6 +35,12 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        if (!dataReset)
+        {
+            Stats.ResetAll();
+            dataReset = true;
+        }
     }
 
     void Start()

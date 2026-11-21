@@ -10,6 +10,7 @@ public class PlayerData : ScriptableObject
     public float DrawSpeedMultiplier = 1;
     public float GoldMultiplier = 1;
 
+    public Upgrade[] Upgrades;
 
     public void Reset()
     {
@@ -17,6 +18,16 @@ public class PlayerData : ScriptableObject
         MaxHealthMultiplier = 1;
         DrawSpeedMultiplier = 1;
         GoldMultiplier = 1;
+    }
+
+    public void ResetAll()
+    {
+        Gold = 0;
+        Reset();
+        foreach (Upgrade upgrade in Upgrades)
+        {
+            upgrade.Reset();
+        }
     }
 
 }
