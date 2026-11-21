@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5c7020192b297428f548627ccffb41, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  Gold: 5700
+  Gold: 100
   DamageMultiplier: 1
   MaxHealthMultiplier: 1
   DrawSpeedMultiplier: 1
-  GoldMultiplier: 1.4
+  GoldMultiplier: 1
+  Upgrades:
+  - {fileID: 11400000, guid: c81fd9d6ab1b0e044948ab95cb7cd4af, type: 2}
+  - {fileID: 11400000, guid: cf18fbf8442188a44b3ecd2548b614ae, type: 2}
+  - {fileID: 11400000, guid: 1d72742d78167404d89ebb4d3007cd3f, type: 2}
+  - {fileID: 11400000, guid: e4abd042a8f8d244095bf24bbaeccb23, type: 2}
