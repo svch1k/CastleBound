@@ -33,4 +33,11 @@ public class PlayerHealth : MonoBehaviour
             LevelManager.Instance.FailLevel();
         }
     }
+
+    public void Heal(float amount)
+    {
+        if (Current <= 0) return;
+        Current = Mathf.Min(maxHealth, Current + amount);
+        HUD.Instance.SetHealth(Mathf.CeilToInt(Current), maxHealth);
+    }
 }
