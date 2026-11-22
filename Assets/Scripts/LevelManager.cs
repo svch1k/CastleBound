@@ -77,7 +77,7 @@ public class LevelManager : MonoBehaviour
             return;
         }
 
-        float progress = Mathf.InverseLerp(startPoint.position.z, finishPoint.position.z, player.position.z); //Determines where a value lies between two points used this as its a value from 0-1 and perfect for progressbar.
+        float progress = Mathf.InverseLerp(startPoint.position.z, finishPoint.position.z - 0.6f, player.position.z); //Determines where a value lies between two points used this as its a value from 0-1 and perfect for progressbar.
         HUD.Instance.SetLevelProgress(progress);
     }
 
